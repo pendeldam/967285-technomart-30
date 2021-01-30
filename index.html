@@ -6,7 +6,7 @@
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/icons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/icons/favicon-180.png">
-    <link rel="manifest" href="js/manifest.webmanifest">
+    <link rel="manifest" href="js/">
   </head>
   <body class="page-body">
     <header class="main-header">
@@ -41,13 +41,13 @@
       </div>
       <nav class="main-header__nav">
         <ul class="main-header__nav-list">
-          <li><a>Главная</a></li>
-          <li><a href="blank.html">Компания</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="blank.html">Новости</a></li>
-          <li><a href="blank.html">Спецпредложения</a></li>
-          <li><a href="blank.html">Доставка</a></li>
-          <li><a href="blank.html">Контакты</a></li>
+          <li><a class="nav-link">Главная</a></li>
+          <li><a class="nav-link" href="blank.html">Компания</a></li>
+          <li><a class="nav-link" href="catalog.html">Каталог</a></li>
+          <li><a class="nav-link" href="blank.html">Новости</a></li>
+          <li><a class="nav-link" href="blank.html">Спецпредложения</a></li>
+          <li><a class="nav-link" href="blank.html">Доставка</a></li>
+          <li><a class="nav-link" href="blank.html">Контакты</a></li>
         </ul>
       </nav>
     </header>
@@ -79,13 +79,13 @@
         </ul>
         <div class="promo-slider">
           <h3>Слайды из каталога</h3>
-          <div>
-            <p>перфораторы</p>
-            <p>Настоящие мужские игрушки</p>
+          <div class="promo-slider__heading">
+            <p class="promo-slider__subtitle">перфораторы</p>
+            <p class="promo-slider__slogan">Настоящие мужские игрушки</p>
           </div>
           <img src="img/slider/perforators.jpg" width="620" height="266" alt="ПЕРФОРАТОРЫ">
-          <button class="promo-slider__btn-prev" type="button">назад</button>
-          <button class="promo-slider__btn-next" type="button">вперед</button>
+          <button class="promo-slider__prev-btn" type="button">назад</button>
+          <button class="promo-slider__next-btn" type="button">вперед</button>
           <a class="site-link" href="catalog.html">открыть каталог</a>
         </div>
       </section>
@@ -123,7 +123,7 @@
       <section class="popular-vendors">
         <div>
           <h2>популярные производители</h2>
-          <a href="blank.html">все производители</a>
+          <a class="site-link" href="blank.html">все производители</a>
         </div>
         <ul class="popular-vendors-list">
           <li class="popular-vendors-list__item">
@@ -227,17 +227,17 @@
         <nav class="main-footer__nav">
           <h2>Карта сайта</h2>
           <ul class="main-footer__nav-list">
-            <li><a href="blank.html">Компания</a></li>
-            <li><a href="blank.html">Новости</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="blank.html">Доставка</a></li>
-            <li><a href="blank.html">Контакты</a></li>
+            <li><a class="nav-link" href="blank.html">Компания</a></li>
+            <li><a class="nav-link" href="blank.html">Новости</a></li>
+            <li><a class="nav-link" href="catalog.html">Каталог</a></li>
+            <li><a class="nav-link" href="blank.html">Доставка</a></li>
+            <li><a class="nav-link" href="blank.html">Контакты</a></li>
           </ul>
           <ul class="main-footer__nav-list">
-            <li><a href="blank.html">Материалы</a></li>
-            <li><a href="blank.html">Техника</a></li>
-            <li><a href="blank.html">Инструмент</a></li>
-            <li><a href="blank.html">Спецпредложения</a></li>
+            <li><a class="nav-link" href="blank.html">Материалы</a></li>
+            <li><a class="nav-link" href="blank.html">Техника</a></li>
+            <li><a class="nav-link" href="blank.html">Инструмент</a></li>
+            <li><a class="nav-link" href="blank.html">Спецпредложения</a></li>
           </ul>
         </nav>
       </div>
@@ -255,7 +255,7 @@
         <p>Обратная связь:
           <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </p>
-        <p>Разработано &bull;
+        <p>Разработано &mdash;
           <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </p>
       </div>
