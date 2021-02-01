@@ -1,0 +1,691 @@
+/* Fonts */
+
+@font-face {
+  font-family: "Cuprum";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/cuprum.woff2") format("woff2"),
+       url("../fonts/cuprum.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Cuprum";
+  font-weight: 400;
+  font-style: italic;
+  src: url("../fonts/cuprumitalic.woff2") format("woff2"),
+       url("../fonts/cuprumitalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Cuprum";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/cuprumbold.woff2") format("woff2"),
+       url("../fonts/cuprumbold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Cuprum";
+  font-weight: 700;
+  font-style: italic;
+  src: url("../fonts/cuprumbolditalic.woff2") format("woff2"),
+       url("../fonts/cuprumbolditalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/ptsans.woff2") format("woff2"),
+       url("../fonts/ptsans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/ptsansbold.woff2") format("woff2"),
+       url("../fonts/ptsansbold.woff") format("woff");
+}
+
+/* Variables */
+
+:root {
+  --basic-black: #000000;
+  --basic-white: #ffffff;
+  --basic-neutral: #eaeaea;
+  --basic-extra-neutral: #C5C5C5;
+  --basic-extra-dark: #A9A9A9;
+  --basic-extra-light: #F1F5F7;
+  --basic-grey: #F2F6F8;
+  --basic-light-grey: #32425C;
+  --basic-dark-grey: #293449;
+  --basic-darkest-grey: #3D546F;
+  --basic-extra-grey: #212A3A;
+  --basic-special-grey:#1D2739;
+  --basic-red: #EE3643;
+  --basic-extra-red: #CA2C37;
+  --basic-dark-red: #BA2732;
+  --basic-yellow: #FFC047;
+  --basic-light-yellow: #FFD180;
+  --basic-dark-yellow: #FFBF47;
+  --basic-blue: #3BBCE3;
+  --basic-pink: #DC91D8;
+  --basic-green: #63A63E;
+  --basic-extra-green: #5FBB2D;
+  --basic-light-green: #8ED78F;
+  --basic-dark-green: #518534;
+  --basic-brown: #F9F5F0;
+  --basic-light-brown: #F7F3EC;
+  --tranparent-white: rgba(255,255,255,0.3);
+  --tranparent-extra-neutral: rgba(197,197,197,0.3);
+  --tranparent-extra-light: rgba(197,197,197,0.5);
+  --tranparent-extra-dark: rgba(169,169,169,0.3);
+  --transparent-black: rgba(0, 0, 0, 0.15);
+ }
+
+ /* Global */
+
+ .page-body {
+   min-width: 1200px;
+   margin: 0;
+   padding: 0;
+   font-family: "PT Sans", Arial, sans-serif;
+   font-size: 13px;
+   line-height: 24px;
+   font-weight: normal;
+   color: var(--basic-black);
+ }
+
+ a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.site-logo {
+  display: block;
+  width: 220px;
+  height: 47px;
+  background: url("../img/misc/logo.png") var(--basic-red) no-repeat center center;
+  border-bottom: 5px var(--basic-dark-red) solid;
+}
+
+.site-logo:active {
+  background-color: var(--basic-dark-red);
+}
+
+.nav-link {
+  font-family: "Cuprum";
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
+}
+
+.site-link {
+  display: block;
+  width: 192px;
+  height: 38px;
+  font-family: "Cuprum";
+  font-size: 14px;
+  line-height: 38px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+
+.site-link:hover {
+  background-color: var(--basic-extra-red);
+}
+
+.site-link:active {
+  background-color: var(--basic-dark-red);
+}
+
+.catalog-link {
+  display: block;
+  height: 38px;
+  width: 141px;
+  margin: 0 auto;
+  font-family: "PT Sans";
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 34px;
+  color: var(--basic-white);
+  background: url(../img/misc/red-button.png) no-repeat center;
+}
+
+.main-header__nav-list,
+.main-footer__nav-list,
+.features-list,
+.popular-goods-list,
+.popular-vendors-list,
+.services-list {
+  list-style: none;
+}
+
+.heading {
+  font-family: "Cuprum";
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border: 0;
+ }
+
+/* main header */
+
+.main-header {
+  background-image: url("../img/misc/background.jpg");
+  padding-bottom: 60px;
+}
+
+.main-header__top,
+.main-header__inner,
+.main-header__nav-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-header__inner {
+  align-items: center;
+  padding: 40px 0 40px 0;
+}
+
+.main-header__top {
+  max-height: 47px;
+  background-color: var(--basic-dark-grey);
+}
+
+.main-header__controls {
+  display: flex;
+}
+
+.main-header__controls a,
+.main-header__search::placeholder {
+  color: var(--basic-white);
+  font-family: "Cuprum";
+  font-size: 18px;
+  line-height: 47px;
+  position: relative;
+  display: block;
+  width: 150px;
+}
+
+.main-header__search-form {
+  width: 271px;
+  position: relative;
+}
+
+.main-header__search {
+  color: var(--basic-white);
+  background-color: inherit;
+  border: none;
+  line-height: 47px;
+  font-size: 18px;
+  cursor: pointer;
+  padding-left: 35px;
+  width: 100%;
+}
+
+.main-header__search-form label {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+}
+
+.main-header__search-form svg {
+  fill: var(--tranparent-white);
+}
+
+.main-header__search-form:hover svg {
+  fill: var(--basic-white);
+}
+
+.main-header__search:focus {
+  color: var(--basic-black);
+  outline: none;
+  background-color: var(--basic-white);
+}
+
+.main-header__search:focus + label svg {
+  fill: var(--basic-red);
+}
+
+.main-header__bookmarks::before {
+  content: url("../img/icons/bookmark.png");
+  position: absolute;
+  left: -25px;
+  top: 2px;
+  opacity: 0.3;
+}
+
+.main-header__cart::before {
+  content: url("../img/icons/cart.png");
+  position: absolute;
+  left: -25px;
+  top: 2px;
+  opacity: 0.3;
+}
+
+.main-header__bookmarks:hover::before,
+.main-header__cart:hover::before {
+  opacity: 1;
+}
+
+.main-header__order {
+  background-color: var(--basic-green);
+  text-align: center;
+}
+
+.main-header__order:hover {
+  background-color: var(--basic-extra-green);
+}
+
+.main-header__bookmarks:active,
+.main-header__cart:active,
+.main-header__bookmarks:active::before,
+.main-header__cart:active::before,
+.main-header__order:active {
+  opacity: 0.5;
+}
+
+.main-header__desc p {
+  width: 197px;
+  height: 71px;
+  font-family: "Cuprum";
+  font-style: italic;
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--basic-red);
+}
+
+.main-header__address .phone-link {
+  display: block;
+  width: 270px;
+  height: 45px;
+  border: 2px var(--basic-white) solid;
+  font-family: "Cuprum";
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 45px;
+  color: var(--basic-red);
+  text-align: center;
+  background: url("../img/icons/phone.png") no-repeat 25px center;
+}
+
+.main-header__address p {
+  font-family: "Cuprum";
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: var(--basic-light-grey);
+}
+
+.main-header__login-btn,
+.main-header__register-btn {
+  font-family: "Cuprum";
+  font-size: 21px;
+  line-height: 21px;
+  height: 45px;
+  background-color: var(--basic-white);
+  border: none;
+  outline: none;
+}
+
+.main-header__login-btn {
+  width: 121px;
+}
+
+.main-header__login-btn svg {
+  fill: var(--basic-extra-neutral);
+}
+
+.main-header__register-btn {
+  width: 150px;
+}
+
+.main-header__login-btn:hover,
+.main-header__register-btn:hover {
+  color: var(--basic-red);
+}
+
+.main-header__login-btn:hover svg{
+  fill: var(--basic-darkest-grey);
+}
+
+.main-header__login-btn:active svg {
+  fill: var(--basic-extra-neutral);
+}
+
+.main-header__login-btn:active,
+.main-header__register-btn:active {
+  color: var(--basic-extra-neutral);
+  outline: none;
+}
+
+.main-header__nav {
+  width: 940px;
+  height: 60px;
+  background-color: var(--basic-light-grey);
+  border-bottom: 3px var(--basic-dark-grey) solid;
+}
+
+.main-header__nav .nav-link {
+  display: block;
+  padding: 0 25px 0 25px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.main-header__nav .nav-link:hover {
+  background-color: var(--basic-dark-grey);
+}
+
+.main-header__nav .nav-link:active {
+  color: var(--tranparent-white);
+  background-color: var(--basic-special-grey);
+}
+
+/* main content */
+
+
+.features-list__item {
+  width: 300px;
+  height: 123px;
+}
+
+.features-list__item:nth-child(1) {
+  background: url("../img/icons/feature-bucket.png") var(--basic-dark-yellow) no-repeat 200px;
+}
+
+.features-list__item:nth-child(2) {
+  background: url("../img/icons/feature-drill.png") var(--basic-blue) no-repeat 200px;
+}
+
+.features-list__item:nth-child(3) {
+  background: url("../img/icons/feature-tractor.png") var(--basic-pink) no-repeat 200px;
+}
+
+.features-list__item:nth-child(4) {
+  background: url("../img/icons/feature-cart.png") var(--basic-light-green) no-repeat 200px;
+}
+
+.features-list__item:nth-child(5) {
+  background: url("../img/icons/feature-truck.png") var(--basic-yellow) no-repeat 200px;
+}
+
+.features-list__item p {
+  padding-left: 23px;
+  padding-top: 20px;
+  font-family: "Cuprum";
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--basic-white);
+}
+
+.features-link {
+  margin-left: 23px;
+  width: 135px;
+  background-color: var(--tranparent-white);
+}
+
+.features-link:hover {
+  background-color: var(--tranparent-extra-light);
+}
+
+.features-link:active {
+  background-color: var(--tranparent-extra-dark);
+}
+
+.promo-slider {
+  width: 620px;
+  height: 266px;
+  background-color: var(--basic-light-grey);
+  background-image: url("../img/slider/perforators.jpg");
+}
+
+.promo-slider__subtitle {
+  font-family: "Cuprum";
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+
+.promo-slider__slogan {
+  font-family: "Cuprum";
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
+}
+
+.promo-slider__prev-btn,
+.promo-slider__next-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.promo-slider__next-btn svg {
+  transform: rotate(180deg);
+}
+
+.popular-goods__heading,
+.popular-vendors__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--basic-brown);
+}
+
+.popular-goods .heading,
+.popular-vendors__heading .heading,
+.services-desc .heading {
+  color: var(--basic-light-grey);
+}
+
+.popular-goods-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.popular-goods-list__item {
+  text-align: center;
+  width: 220px;
+  height: 318px;
+  box-sizing: border-box;
+  border: 1px var(--basic-neutral) solid;
+}
+
+.popular-goods-list__item:hover {
+  box-shadow: 0px 4px 20px var(--transparent-black);
+}
+
+.popular-goods-list__item h3 {
+  font-family: "PT Sans";
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.popular-goods-list__item p {
+  font-family: "PT Sans";
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  text-decoration-line: line-through;
+  text-transform: uppercase;
+  color: var(--basic-extra-dark);
+}
+
+.popular-vendors-list {
+  display: flex;
+}
+
+.popular-vendors-list__item {
+  width: 220px;
+  height: 145px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px var(--basic-neutral) solid;
+  box-sizing: border-box;
+}
+
+.popular-vendors-list__item:hover {
+  box-shadow: 0px 4px 20px var(--transparent-black);
+  opacity: 0.5;
+}
+
+.services {
+  background-color: var(--basic-extra-light);
+}
+
+.services-wrapper {
+  display: flex;
+}
+
+.services-list__item {
+  background-color: var(--basic-light-grey);
+  color: var(--basic-white);
+  font-family: "Cuprum";
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  height: 61px;
+  width: 240px;
+}
+
+.services-list__item span {
+  padding: 13px 0 0 22px;
+  display: block;
+}
+
+.services-list__item:hover {
+  background-color: var(--basic-dark-grey);
+}
+
+.services-list__item--active {
+  background-color: var(--basic-white);
+  color: var(--basic-light-grey);
+}
+
+.contacts-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin: 70px 0 70px 0;
+}
+
+.transport-companies-list {
+  list-style: none;
+}
+
+.transport-companies-list li {
+  font-family: "Cuprum";
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-black);
+  position: relative;
+}
+
+.transport-companies-list li::before {
+  content: url("../img/icons/marker-line.png");
+  bottom: 5px;
+  position: absolute;
+  left: -30px;
+}
+
+/* main-footer */
+
+.main-footer__top {
+  background-color: var(--basic-light-grey);
+  display: flex;
+}
+
+.main-footer__bottom {
+  background-color: var(--basic-dark-grey);
+  display: flex;
+  font-family: "Cuprum";
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-white);
+}
+
+.main-footer__top p,
+.main-footer__top .phone-link {
+  font-family: "Cuprum";
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
+}
+
+.main-footer__nav ul:last-child a,
+.host-mail,
+.dev-site {
+  color: var(--basic-light-yellow);
+}
+
+.main-footer__nav a:hover,
+.host-mail:hover,
+.dev-site:hover {
+  text-decoration: underline;
+}
+
+.main-footer__nav a:active {
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.host-mail:active,
+.dev-site:active {
+  color: var(--basic-red);
+}
+
+.main-footer__nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-footer__social-links {
+  display: flex;
+}
+
+.main-footer__social-links a {
+  display: block;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  background-color: var(--basic-extra-grey);
+}
+
+.main-footer__social-links a:hover,
+.main-footer__social-links a:active {
+  background-color: var(--basic-red);
+}
+
+.social-link-vk {
+  background: url("../img/icons/social/vk.png") no-repeat center;
+}
+
+.social-link-fb {
+  background: url("../img/icons/social/fb.png") no-repeat center;
+}
+
+.social-link-insta {
+  background: url("../img/icons/social/instagram.png") no-repeat center;
+}
