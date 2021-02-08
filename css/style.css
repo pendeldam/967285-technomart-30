@@ -203,6 +203,7 @@ img {
 
 .main-header {
   background-image: url("../img/misc/background.jpg");
+  font-family: "Cuprum", Arial, sans-serif;
 }
 
 .main-header__top-wrapper {
@@ -232,7 +233,6 @@ img {
 .main-header__controls a,
 .main-header__search::placeholder {
   color: var(--basic-white);
-  font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 47px;
   position: relative;
@@ -334,7 +334,6 @@ img {
 
 .main-header__desc p {
   width: 197px;
-  font-family: "Cuprum", Arial, sans-serif;
   font-style: italic;
   font-size: 16px;
   line-height: 23px;
@@ -345,7 +344,6 @@ img {
   display: block;
   width: 270px;
   border: 2px var(--basic-white) solid;
-  font-family: "Cuprum", Arial, sans-serif;
   font-weight: bold;
   font-size: 21px;
   line-height: 45px;
@@ -355,7 +353,6 @@ img {
 }
 
 .main-header__address p {
-  font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
   text-align: center;
@@ -364,7 +361,6 @@ img {
 
 .main-header__login-btn,
 .main-header__register-btn {
-  font-family: "Cuprum", Arial, sans-serif;
   font-size: 21px;
   line-height: 21px;
   height: 45px;
@@ -416,7 +412,6 @@ img {
 }
 
 .main-header__user-name {
-  font-family: "Cuprum", Arial, sans-serif;
   font-size: 21px;
   line-height: 45px;
   color: var(--basic-black);
@@ -429,7 +424,6 @@ img {
 }
 
 .main-header__user-controls a {
-  font-family: "Cuprum", Arial, sans-serif;
   font-size: 16px;
   line-height: 18px;
   text-align: center;
@@ -902,7 +896,7 @@ img {
   font-size: 30px;
   line-height: 30px;
   padding: 30px;
-  margin: 20px 0 0;
+  margin: 0;
 }
 
 .catalog-filters {
