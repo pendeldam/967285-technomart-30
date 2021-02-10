@@ -212,12 +212,12 @@ img {
 
 .main-header__top {
   display: grid;
-  grid-template-columns: 220px auto auto;
+  grid-template-columns: 220px 271px auto;
 }
 
 .main-header__inner {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 60px;
   row-gap: 20px;
   padding: 40px 0 40px 0;
@@ -226,8 +226,7 @@ img {
 .main-header__controls {
   display: flex;
   justify-content: space-between;
-  justify-self: end;
-  width: 400px;
+  padding-left: 20px;
 }
 
 .main-header__controls a,
@@ -235,8 +234,14 @@ img {
   color: var(--basic-white);
   font-size: 18px;
   line-height: 47px;
-  position: relative;
-  display: block;
+}
+
+.main-header__bookmarks,
+.main-header__cart {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 9px;
+  align-items: center;
 }
 
 .main-header__search-form {
@@ -281,18 +286,14 @@ img {
 
 .main-header__bookmarks::before {
   content: url("../img/icons/bookmark.png");
-  position: absolute;
-  left: -25px;
-  top: 2px;
   opacity: 0.3;
+  padding-top: 5px;
 }
 
 .main-header__cart::before {
   content: url("../img/icons/cart.png");
-  position: absolute;
-  left: -25px;
-  top: 2px;
   opacity: 0.3;
+  padding-top: 5px;
 }
 
 .main-header__bookmarks:hover::before,
@@ -303,7 +304,7 @@ img {
 .main-header__order {
   background-color: var(--basic-green);
   text-align: center;
-  padding: 0 15px;
+  width: 150px;
 }
 
 .main-header__order:hover {
@@ -323,11 +324,12 @@ img {
 }
 
 .main-header__address {
-  justify-self: center;
   width: 270px;
 }
 
 .main-header__auth {
+  display: flex;
+  justify-content: space-between;
   justify-self: end;
   width: 300px;
 }
@@ -466,6 +468,7 @@ img {
 }
 
 .main-header__nav {
+  padding: 0 53px;
   grid-column: 1 / -1;
   background-color: var(--basic-light-grey);
   border-bottom: 3px var(--basic-dark-grey) solid;
@@ -480,7 +483,6 @@ img {
 
 .main-header__nav .nav-link {
   display: block;
-  padding: 0 25px 0 25px;
   line-height: 60px;
   text-align: center;
 }
@@ -662,40 +664,43 @@ img {
   padding: 0;
 }
 
-.catalog-goods__list-item {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  row-gap: 20px;
+.catalog-product-card {
   width: 220px;
+  min-height: 318px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   box-sizing: border-box;
   border: 1px var(--basic-neutral) solid;
 }
 
-.catalog-goods__list-item img {
+.catalog-product-card img {
   justify-self: center;
+  max-width: 144px;
+  padding-top: 21px;
 }
 
-.product-goods-list__item-wrapper {
+.catalog-product-card__wrapper {
   text-align: center;
 }
 
-.popular-goods-list__item:hover,
-.catalog-goods__list-item:hover {
+.catalog-product-card:hover {
   box-shadow: 0px 4px 20px var(--transparent-black);
 }
 
-.catalog-goods__list-item--popup {
+.catalog-product-card__popup {
   display: none;
 }
 
-.catalog-goods__list-item h3 {
+.catalog-product-card h3 {
   font-family: "PT Sans";
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
+  margin: 28px 0 7px 0;
 }
 
-.catalog-goods__list-item p {
+.catalog-product-card p {
   font-family: "PT Sans";
   font-weight: bold;
   font-size: 17px;
@@ -703,6 +708,8 @@ img {
   text-decoration-line: line-through;
   text-transform: uppercase;
   color: var(--basic-extra-dark);
+  margin: 0;
+  margin-bottom: 7px;
 }
 
 .popular-vendors-list {
@@ -753,6 +760,7 @@ img {
 
 .services-list {
   padding: 0;
+  margin: 0;
   position: relative;
 }
 
@@ -796,12 +804,28 @@ img {
 }
 
 .services-desc__info {
-  background: url("../img/misc/delivery.png") no-repeat right 50px;
-  padding-left: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 60px 1fr;
+}
+
+.services-desc__info img {
+  grid-area: 1 / 1 / -1 / -1;
+  justify-self: end;
+  margin-top: 30px;
 }
 
 .services-desc__info h3 {
   color: var(--basic-light-grey);
+  margin: 0;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.services-desc__info p {
+  margin: 0;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
 }
 
 .contacts-wrapper {
@@ -906,6 +930,7 @@ img {
 .catalog-filters__form fieldset {
   border: none;
   border-bottom: 1px solid var(--basic-extra-neutral);
+  padding: 0;
   padding-bottom: 25px;
 }
 
