@@ -164,8 +164,8 @@ img {
 .catalog-link {
   display: block;
   width: 141px;
-  height: 68px;
-  margin: 15px auto;
+  height: 38px;
+  margin: 15px auto 0;
   font-family: "PT Sans";
   font-weight: bold;
   font-size: 17px;
@@ -675,7 +675,7 @@ img {
 
 .popular-goods,
 .popular-vendors {
-  margin-bottom: 12px;
+  margin-bottom: 50px;
 }
 
 .populars-heading {
@@ -774,7 +774,6 @@ img {
   text-transform: uppercase;
   color: var(--basic-extra-dark);
   margin: 0;
-  margin-bottom: 7px;
 }
 
 .popular-vendors-list {
@@ -888,7 +887,7 @@ img {
 .contacts-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 80px 0 70px;
+  padding: 80px 0 63px;
 }
 
 .about-us, .contacts {
