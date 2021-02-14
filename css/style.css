@@ -226,7 +226,7 @@ img {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr auto;
   row-gap: 20px;
-  padding: 40px 0 40px 0;
+  padding: 40px 0 60px 0;
 }
 
 .main-header__controls {
@@ -675,7 +675,7 @@ img {
 
 .popular-goods,
 .popular-vendors {
-  margin-bottom: 70px;
+  margin-bottom: 12px;
 }
 
 .populars-heading {
@@ -804,6 +804,7 @@ img {
 
 .services {
   background-color: var(--basic-extra-light);
+  margin-top: 70px;
 }
 
 .services-wrapper {
@@ -817,7 +818,7 @@ img {
 }
 
 .services-heading-wrapper .heading {
-  margin: 70px 0 25px 0;
+  margin: 65px 0 25px 0;
 }
 
 .services-desc-wrapper {
@@ -887,7 +888,7 @@ img {
 .contacts-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 70px 0;
+  padding: 80px 0 70px;
 }
 
 .about-us, .contacts {
@@ -1323,7 +1324,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 32px 0;
+  padding: 28px 0 32px;
 }
 
 .main-footer__copyright > p {
