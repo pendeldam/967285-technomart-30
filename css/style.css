@@ -53,6 +53,7 @@
 :root {
   --basic-black: #000000;
   --basic-white: #ffffff;
+  --basic-extra-white: #f4f4f4;
   --basic-neutral: #eaeaea;
   --basic-extra-neutral: #C5C5C5;
   --basic-extra-dark: #A9A9A9;
@@ -1408,4 +1409,134 @@ img {
 
 .social-link-insta {
   background: url("../img/icons/social/instagram.png") no-repeat center;
+}
+
+/* modal-feedback */
+
+.modal-feedback {
+  position: fixed;
+  top: 25%;
+  left: 30%;
+  background-color: var(--basic-white);
+  filter: drop-shadow(0px 20px 40px rgba(0, 0, 0, 0.75));
+}
+
+.modal-feedback__close-btn {
+  position: absolute;
+  top: 22px;
+  right: 8px;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.modal-feedback__close-btn::after {
+  content: "";
+  width: 0;
+  height: 25px;
+  border-left: 4px solid var(--basic-red);
+  transform: rotate(-45deg);
+  position: absolute;
+  top: -1px;
+  right: 10px;
+}
+
+.modal-feedback__close-btn::before {
+  content: "";
+  width: 0px;
+  height: 25px;
+  border-left: 4px solid var(--basic-red);
+  transform: rotate(45deg);
+  position: absolute;
+  top: -1px;
+  right: 10px;
+}
+
+.modal-feedback__form {
+  display: flex;
+  flex-direction: column;
+  width: 620px;
+  min-height: 430px;
+  box-sizing: border-box;
+  border-top: 7px solid var(--basic-red);
+}
+
+.modal-feedback__form-wrapper {
+  margin: 0 80px;
+}
+
+.modal-feedback__user_wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 40px;
+}
+
+.modal-feedback__user-name-wrapper,
+.modal-feedback__user-mail-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-feedback__form label {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 11px;
+}
+
+.modal-feedback__form input {
+  width: 220px;
+  line-height: 32px;
+  margin-bottom: 13px;
+  padding-top: 2px;
+  padding-left: 10px;
+}
+
+.modal-feedback__form input::placeholder,
+.modal-feedback__form textarea::placeholder {
+  color: var(--basic-extra-dark);
+}
+
+.modal-feedback__message-wrapper {
+  width: 100%;
+  max-height: 146px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 37px;
+}
+
+.modal-feedback__form input,
+.modal-feedback__form textarea {
+  border: 2px solid var(--basic-extra-neutral);
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.modal-feedback__form textarea {
+  padding-top: 8px;
+  padding-left: 10px;
+  resize: none;
+}
+
+.modal-feedback__submit-wrapper {
+  width: 100%;
+  background-color: var(--basic-extra-white);
+}
+
+.modal-feedback__form button[type="submit"] {
+  width: 100%;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  border: none;
+  text-transform: uppercase;
+  padding: 10px 0;
+  margin: 37px 0;
 }

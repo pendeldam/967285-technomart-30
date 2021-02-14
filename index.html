@@ -305,5 +305,33 @@
         </div>
       </div>
     </footer>
+
+    <section class="modal modal-feedback">
+      <h2 class="visually-hidden">Форма обратной связи</h2>
+      <button class="modal modal-feedback__close-btn" aria-label="закрыть форму"></button>
+      <form class="modal-feedback__form" action="https://echo.htmlacademy.ru" method="POST">
+        <div class="modal-feedback__form-wrapper">
+          <div class="modal-feedback__user_wrapper">
+            <div class="modal-feedback__user-name-wrapper">
+              <label for="modal-feedback__user-name">Ваше имя:</label>
+              <input type="text" id="modal-feedback__user-name" name="user-name" placeholder="Имя Фамилия" required>
+            </div>
+            <div class="modal-feedback__user-mail-wrapper">
+              <label for="modal-feedback__user-mail">Ваш e-mail:</label>
+              <input type="email" id="modal-feedback__user-mail" name="user-email" placeholder="email@example.com" required>
+            </div>
+          </div>
+          <div class="modal-feedback__message-wrapper">
+            <label for="modal-feedback__message">Текст письма:</label>
+            <textarea id="modal-feedback__message" name="user-message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+          </div>
+        </div>
+        <div class="modal-feedback__submit-wrapper">
+          <div class="modal-feedback__form-wrapper">
+            <button type="submit">отправить</button>
+          </div>
+        </div>
+      </form>
+    </section>
   </body>
 </html>
