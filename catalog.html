@@ -99,14 +99,19 @@
           <form class="catalog-filters__form" action="https://echo.htmlacademy.ru" method="GET">
               <fieldset class="catalog-filters__price">
                 <legend>цена:</legend>
-                <div class="catalog-filters__price-range-wrapper">
-                  <input class="filter-input-range" type="range" name="price-range" id="filter-price-range-min" min="0" max="30000">
-                  <input class="filter-input-range" type="range" name="price-range" id="filter-price-range-max" min="0" max="30000">
-                </div>
-                <div class="catalog-filters__price-limit">
-                  <input type="text" name="price-limit" id="filter-price-limit-from" value="0">
-                  <span>&ndash;</span>
-                  <input type="text" name="price-limit" id="filter-price-limit-to" value="30000">
+                <div class="catalog-filters__price-wrapper">
+                  <div class="catalog-filters__price-controls">
+                    <div class="catalog-filters__price-scale">
+                      <div class="catalog-filters__price-bar" style="width: 80%; margin-left: 0%"></div>
+                    </div>
+                    <div class="catalog-filters__price-toggle toggle-min" tabindex="0" style="left: 5%"></div>
+                    <div class="catalog-filters__price-toggle toggle-max" tabindex="0" style="left: 70%"></div>
+                  </div>
+                  <div class="catalog-filters__price-limit">
+                    <input type="text" name="price-limit" id="filter-price-limit-from" value="0">
+                    <span>&ndash;</span>
+                    <input type="text" name="price-limit" id="filter-price-limit-to" value="30000">
+                  </div>
                 </div>
               </fieldset>
               <fieldset class="catalog-filters__vendors">

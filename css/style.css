@@ -1055,6 +1055,50 @@ img {
   line-height: 38px;
 }
 
+.catalog-filters__price-controls {
+  position: relative;
+  height: 41px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: var(--basic-brown);
+  border-radius: 5px;
+}
+
+.catalog-filters__price-scale {
+  height: 2px;
+  background: #d7dcde;
+}
+
+.catalog-filters__price-bar {
+  width: 70%;
+  height: 2px;
+  background: #00ca74;
+}
+
+.catalog-filters__price-toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+  box-shadow: 0 2px 0px 0 rgba(171,171,171,0.3);
+  cursor: pointer;
+}
+
+.catalog-filters__price-toggle .toggle-min {
+  left: 18px;
+}
+
+.catalog-filters__price-toggle .toggle-max {
+  left: 160px;
+}
+
 .catalog-filters__price-limit {
   display: flex;
 }
