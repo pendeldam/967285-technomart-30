@@ -167,14 +167,15 @@ img {
   display: block;
   width: 141px;
   height: 38px;
-  margin: 13px 0 0 15px;
-  padding-right: 17px;
+  margin-bottom: 8px;
+  margin-left: 10px;
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: bold;
   font-size: 17px;
   line-height: 34px;
   color: var(--basic-white);
-  background: url("../img/misc/red-button.svg") no-repeat;
+  background: url(../img/misc/red-button.svg) no-repeat;
+  box-sizing: border-box;
 }
 
 .main-header__nav-list,
@@ -251,18 +252,14 @@ img {
 
 .main-header__bookmarks,
 .main-header__cart {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 5px;
-  align-items: center;
-}
-
-.main-header__bookmarks {
-  margin-right: 25px;
+  position: relative;
+  display: block;
 }
 
 .main-header__cart {
-  padding: 0 17px;
+  width: 136px;
+  padding: 0 38px;
+  box-sizing: border-box;
 }
 
 .cart-full {
@@ -309,16 +306,24 @@ img {
   fill: var(--basic-red);
 }
 
+.main-header__bookmarks {
+  padding-left: 24px;
+}
+
 .main-header__bookmarks::before {
   content: url("../img/icons/bookmark.png");
   opacity: 0.3;
-  padding-top: 5px;
+  position: absolute;
+  top: 3px;
+  left: 0px;
 }
 
 .main-header__cart::before {
   content: url("../img/icons/cart.png");
   opacity: 0.3;
-  padding-top: 5px;
+  position: absolute;
+  top: 0px;
+  left: 13px;
 }
 
 .main-header__bookmarks:hover::before,
@@ -350,7 +355,7 @@ img {
 
 .main-header__address {
   width: 270px;
-  padding: 5px 0 0 5px;
+  padding: 5px 0 0 10px;
 }
 
 .main-header__auth {
@@ -359,7 +364,7 @@ img {
 }
 
 .main-header__desc p {
-  margin: 0;
+  margin: 3px 5px;
   width: 197px;
   font-style: italic;
   font-size: 16px;
@@ -401,7 +406,7 @@ img {
 
 .main-header__login-btn {
   width: 121px;
-  margin-right: 10px;
+  margin-right: 4px;
   cursor: pointer;
 }
 
@@ -412,6 +417,7 @@ img {
 .main-header__register-btn {
   width: 150px;
   cursor: pointer;
+  padding-left: 15px;
 }
 
 .main-header__login-btn:hover,
@@ -497,7 +503,8 @@ img {
 
 .main-header__nav {
   margin-top: 15px;
-  padding: 0 25px;
+  padding-right: 22px;
+  padding-left: 32px;
   grid-column: 1 / -1;
   background-color: var(--basic-light-grey);
   border-bottom: 3px var(--basic-dark-grey) solid;
@@ -545,32 +552,32 @@ img {
 
 .features-list__item:nth-child(1) {
   grid-area: card-1;
-  background: url("../img/icons/feature-bucket.png") var(--basic-dark-yellow) no-repeat 208px;
+  background: url("../img/icons/feature-bucket.png") var(--basic-dark-yellow) no-repeat 217px;
   position: relative;
 }
 
 .features-list__item:nth-child(2) {
   grid-area: card-2;
-  background: url("../img/icons/feature-drill.png") var(--basic-blue) no-repeat 190px;
+  background: url("../img/icons/feature-drill.png") var(--basic-blue) no-repeat 198px;
 }
 
 .features-list__item:nth-child(3) {
   grid-area: card-3;
-  background: url("../img/icons/feature-tractor.png") var(--basic-pink) no-repeat 188px;
+  background: url("../img/icons/feature-tractor.png") var(--basic-pink) no-repeat 196px;
 }
 
 .features-list__item:nth-child(4) {
   grid-area: card-4;
-  background: url("../img/icons/feature-cart.png") var(--basic-light-green) no-repeat 192px;
+  background: url("../img/icons/feature-cart.png") var(--basic-light-green) no-repeat 201px;
 }
 
 .features-list__item:nth-child(5) {
   grid-area: card-5;
-  background: url("../img/icons/feature-truck.png") var(--basic-yellow) no-repeat 187px;
+  background: url("../img/icons/feature-truck.png") var(--basic-yellow) no-repeat 195px;
 }
 
 .features-list__item p {
-  margin: 20px 0 15px 20px;
+  margin: 20px 0 15px 25px;
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: bold;
   font-size: 24px;
@@ -624,7 +631,7 @@ img {
 .promo-slider__nav {
   display: flex;
   justify-content: space-between;
-  margin: 38px 30px 0 25px;
+  margin: 38px 25px 0 33px;
 }
 
 .promo-slider__subtitle {
@@ -634,7 +641,7 @@ img {
   line-height: 36px;
   text-transform: uppercase;
   color: var(--basic-white);
-  margin: 25px 0 5px 20px;
+  margin: 25px 0 5px 25px;
 }
 
 .promo-slider__slogan {
@@ -643,7 +650,7 @@ img {
   line-height: 24px;
   color: var(--basic-white);
   margin: 0;
-  margin-left: 20px;
+  margin-left: 26px;
 }
 
 .promo-slider__prev-btn,
@@ -681,17 +688,17 @@ img {
 }
 
 .promo-slider .site-link {
-  margin: 45px 0 0 20px;
+  margin: 42px 0 0 25px;
 }
 
 .popular-goods,
 .popular-vendors {
-  margin-bottom: 70px;
+  margin-bottom: 75px;
 }
 
 .populars-heading {
   padding: 25px 15px 25px 28px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -728,6 +735,12 @@ img {
   align-items: center;
   border: 1px var(--basic-neutral) solid;
   box-sizing: border-box;
+  padding-top: 10px;
+  padding-left: 8px;
+}
+
+.popular-vendors-list__item img {
+  object-fit: contain;
 }
 
 .popular-vendors-list__item:hover {
@@ -746,7 +759,7 @@ img {
 .services-wrapper {
   display: grid;
   grid-template-rows: 1fr 1.5fr;
-  row-gap: 60px;
+  row-gap: 55px;
 }
 
 .services-heading-wrapper {
@@ -858,17 +871,22 @@ img {
 .transport-companies-list li {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
-  line-height: 33px;
+  line-height: 24px;
   color: var(--basic-black);
   position: relative;
   padding-left: 9px;
+  margin-bottom: 12px;
+}
+
+.transport-companies-list li:last-child {
+  margin: 0;
 }
 
 .transport-companies-list li::before {
   content: "";
   position: absolute;
   left: -30px;
-  bottom: 17px;
+  bottom: 12px;
   width: 25px;
 
   border-bottom: 2px solid var(--basic-red);
@@ -1235,7 +1253,7 @@ img {
   width: 220px;
   min-height: 318px;
   display: grid;
-  grid-template-rows: 165px auto;
+  grid-template-rows: 165px auto 18px auto;
   justify-items: center;
   align-items: center;
   text-align: center;
@@ -1270,11 +1288,6 @@ img {
 
 .catalog-product-card img {
   object-fit: contain;
-}
-
-.catalog-product-card__wrapper {
-  display: flex;
-  flex-direction: column;
 }
 
 .catalog-product-card__buy-btn,
@@ -1339,7 +1352,7 @@ img {
   font-size: 18px;
   line-height: 20px;
   margin: 0;
-  margin-bottom: 8px;
+  margin-top: 5px;
 }
 
 .catalog-product-card p {
@@ -1351,6 +1364,7 @@ img {
   text-transform: uppercase;
   color: var(--basic-extra-dark);
   margin: 0;
+  margin-bottom: 10px;
 }
 
 .catalog-pagination_list {
@@ -1362,7 +1376,7 @@ img {
 .catalog-pagination_list li {
   width: 38px;
   border: 1px solid var(--basic-neutral);
-  margin-right: 10px;
+  margin-right: 7px;
   text-align: center;
   border-radius: 2px;
 }
