@@ -176,6 +176,8 @@ img {
   color: var(--basic-white);
   background: url(../img/misc/red-button.svg) no-repeat;
   box-sizing: border-box;
+  grid-row: 4 / 5;
+  padding-right: 15px;
 }
 
 .main-header__nav-list,
@@ -198,6 +200,7 @@ img {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
+  white-space: nowrap;
   width: 1px;
   height: 1px;
   padding: 0;
@@ -350,12 +353,12 @@ img {
 }
 
 .main-header__desc {
-  padding-left: 30px;
+  padding-left: 25px;
 }
 
 .main-header__address {
   width: 270px;
-  padding: 5px 0 0 10px;
+  padding: 12px 0 0 9px;
 }
 
 .main-header__auth {
@@ -379,7 +382,7 @@ img {
   box-sizing: border-box;
   font-weight: bold;
   font-size: 21px;
-  line-height: 45px;
+  line-height: 30px;
   color: var(--basic-red);
   text-align: center;
   background: url("../img/icons/phone.png") no-repeat 35px center;
@@ -388,6 +391,8 @@ img {
 
 .main-header__address p {
   margin: 0;
+  margin-top: 9px;
+  padding-right: 3px;
   font-size: 14px;
   line-height: 24px;
   text-align: center;
@@ -399,15 +404,19 @@ img {
   font-size: 21px;
   line-height: 21px;
   height: 45px;
+  text-align: center;
   background-color: var(--basic-white);
   border: none;
-  outline: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 10px 0;
+  display: inline-block;
 }
 
 .main-header__login-btn {
   width: 121px;
   margin-right: 4px;
-  cursor: pointer;
+  padding-right: 13px;
 }
 
 .main-header__login-btn svg {
@@ -416,8 +425,7 @@ img {
 
 .main-header__register-btn {
   width: 150px;
-  cursor: pointer;
-  padding-left: 15px;
+  padding-left: 6px;
 }
 
 .main-header__login-btn:hover,
@@ -436,20 +444,24 @@ img {
 .main-header__login-btn:active,
 .main-header__register-btn:active {
   color: var(--basic-extra-neutral);
+  outline: none;
 }
 
 .main-header__user-info {
+  width: 299px;
+  height: 45px;
   display: grid;
   grid-template-columns: repeat(3, auto);
   column-gap: 20px;
   align-items: center;
   background-color: var(--basic-white);
   padding: 0 15px;
+  box-sizing: border-box;
 }
 
 .main-header__user-name {
   font-size: 21px;
-  line-height: 45px;
+  line-height: 21px;
   color: var(--basic-black);
 }
 
@@ -468,10 +480,12 @@ img {
 
 .main-header__user-controls a:first-child {
   justify-self: right;
+  padding-left: 10px;
 }
 
 .main-header__user-controls a:last-child {
   justify-self: left;
+  padding-right: 12px;
 }
 
 .main-header__user-controls span {
@@ -503,8 +517,8 @@ img {
 
 .main-header__nav {
   margin-top: 15px;
-  padding-right: 22px;
-  padding-left: 32px;
+  padding-left: 29px;
+  padding-right: 28px;
   grid-column: 1 / -1;
   background-color: var(--basic-light-grey);
   border-bottom: 3px var(--basic-dark-grey) solid;
@@ -656,7 +670,6 @@ img {
 .promo-slider__prev-btn,
 .promo-slider__next-btn {
   background-color: transparent;
-  outline: none;
   border: none;
   border-bottom: 3px solid var(--basic-white);
   border-left: 3px solid var(--basic-white);
@@ -664,6 +677,13 @@ img {
   height: 30px;
   transform: rotate(45deg);
   cursor: pointer;
+}
+
+.promo-slider__prev-btn:focus,
+.promo-slider__next-btn:focus {
+  outline: none;
+  border-bottom: 3px solid var(--basic-red);
+  border-left: 3px solid var(--basic-red);
 }
 
 .promo-slider__next-btn {
@@ -696,8 +716,12 @@ img {
   margin-bottom: 75px;
 }
 
+.popular-goods .populars-heading {
+  margin-bottom: 20px;
+}
+
 .populars-heading {
-  padding: 25px 15px 25px 28px;
+  padding: 23px 17px 24px 28px;
   margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
@@ -827,7 +851,7 @@ img {
 .services-desc__info h3 {
   color: var(--basic-light-grey);
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 31px;
 }
 
 .services-desc__info p {
@@ -837,7 +861,7 @@ img {
 .contacts-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 80px 0 69px;
+  padding: 85px 0 69px;
 }
 
 .about-us, .contacts {
@@ -1130,6 +1154,11 @@ img {
   opacity: 1 !important;
 }
 
+.catalog-filters__vendors input:focus + label,
+.catalog-filters__power-supply input:focus + label {
+  color: var(--basic-yellow);
+}
+
 .catalog-filters__vendors input:disabled + label,
 .catalog-filters__power-supply input:disabled + label {
   opacity: 0.3;
@@ -1352,7 +1381,7 @@ img {
   font-size: 18px;
   line-height: 20px;
   margin: 0;
-  margin-top: 5px;
+  margin-top: 2px;
 }
 
 .catalog-product-card p {
