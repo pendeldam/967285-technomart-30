@@ -860,19 +860,41 @@ img {
   box-shadow: none;
 }
 
-.services-desc__info {
-  display: flex;
-  flex-direction: column;
-  background: url("../img/misc/delivery.png") no-repeat bottom right;
+.services-desc-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-.services-desc__info h3 {
+.services-desc-list__item {
+  display: none;
+  height: 100%;
+}
+
+.services-desc-list__item:nth-child(1) {
+  background: url("../img/misc/delivery.png") no-repeat right 20px;
+}
+
+.services-desc-list__item:nth-child(2) {
+  background: url("../img/misc/warranty.png") no-repeat 230px 0;
+}
+
+.services-desc-list__item:nth-child(3) {
+  background: url("../img/misc/credit.png") no-repeat 155px 0;
+}
+
+.services-desc-list__item--active {
+  display: flex;
+  flex-direction: column;
+}
+
+.services-desc-list__item h3 {
   color: var(--basic-light-grey);
   margin: 0;
   margin-bottom: 31px;
 }
 
-.services-desc__info p {
+.services-desc-list__item p {
   margin: 0;
 }
 
@@ -1174,9 +1196,7 @@ img {
 
 .catalog-filters__vendors input:focus + label,
 .catalog-filters__power-supply input:focus + label {
-  box-shadow:
-  0 0 0 3px var(--basic-white),
-  0 0 0 6px var(--basic-blue);
+  opacity: 1;
 }
 
 .catalog-filters__vendors input:disabled + label,
@@ -1284,7 +1304,9 @@ img {
 }
 
 .catalog-sorting__direction input:focus + label > svg {
-  fill: var(--basic-blue);
+  box-shadow:
+  0 0 0 3px var(--basic-white),
+  0 0 0 6px var(--basic-blue);
 }
 
 .catalog-goods {
