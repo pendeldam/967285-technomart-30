@@ -639,11 +639,11 @@ img {
   position: relative;
 }
 
-.slide-1 {
+.promo-slider__slide-1 {
   background: url("../img/slider/perforators.jpg") no-repeat;
 }
 
-.slide-2 {
+.promo-slider__slide-2 {
   background: url("../img/slider/drills.jpg") no-repeat;
 }
 
@@ -653,11 +653,11 @@ img {
   padding: 0;
 }
 
-.slide {
+.promo-slider__list-item {
   display: none;
 }
 
-.current-slide {
+.promo-slider__list-item--active {
   display: block;
 }
 
@@ -748,7 +748,7 @@ img {
   cursor: pointer;
 }
 
-.promo-slider__controls .current {
+.promo-slider__controls--active {
   background-color: var(--basic-red);
 }
 

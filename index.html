@@ -91,15 +91,15 @@
             <p>Доставка</p>
             <a class="site-link features-link" href="#">бесплатно</a>
           </div>
-        <div class="promo-slider slide-1">
+        <div class="promo-slider promo-slider__slide-1">
           <ul class="promo-slider__list">
-            <li class="promo-slider__list-item slide current-slide">
+            <li class="promo-slider__list-item promo-slider__list-item--active">
               <div class="promo-slider__heading">
                 <p class="promo-slider__subtitle">перфораторы</p>
                 <p class="promo-slider__slogan">Настоящие мужские игрушки</p>
               </div>
             </li>
-            <li class="promo-slider__list-item slide">
+            <li class="promo-slider__list-item">
               <div class="promo-slider__heading">
                 <p class="promo-slider__subtitle">дрели</p>
                 <p class="promo-slider__slogan">Соседям на радость!</p>
@@ -112,8 +112,8 @@
           </div>
           <a class="site-link" href="catalog.html">открыть каталог</a>
           <div class="promo-slider__controls">
-            <button type="button" aria-label="первый слайд"></button>
-            <button class="current" type="button" aria-label="второй слайд"></button>
+            <button class="promo-slider__controls--active" type="button" aria-label="первый слайд"></button>
+            <button type="button" aria-label="второй слайд"></button>
           </div>
         </div>
         </div>
@@ -208,13 +208,13 @@
           <div class="services-desc-wrapper">
             <ul class="services-list">
               <li class="services-list__item services-list__item--active">
-                <button data-id="delivery">Доставка</button>
+                <button type="button" data-id="delivery">Доставка</button>
               </li>
               <li class="services-list__item">
-                <button data-id="warranty">Гарантия</button>
+                <button type="button" data-id="warranty">Гарантия</button>
               </li>
               <li class="services-list__item">
-                <button data-id="credit">Кредит</button>
+                <button type="button" data-id="credit">Кредит</button>
               </li>
             </ul>
             <ul class="services-desc-list">
@@ -330,7 +330,7 @@
 
     <section class="modal modal-feedback">
       <h2 class="visually-hidden">Форма обратной связи</h2>
-      <button class="modal-close-btn" aria-label="закрыть форму"></button>
+      <button class="modal-close-btn" type="button" aria-label="закрыть форму"></button>
       <form class="modal-feedback__form" action="https://echo.htmlacademy.ru" method="POST">
         <div class="modal-feedback__form-wrapper">
           <div class="modal-feedback__user_wrapper">
@@ -358,10 +358,10 @@
 
     <section class="modal modal-map">
       <h2 class="visually-hidden">мы на карте города</h2>
-      <button class="modal-close-btn" aria-label="закрыть форму"></button>
+      <button class="modal-close-btn" type="button" aria-label="закрыть форму"></button>
       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d499.6520979603391!2d30.32327355270952!3d59.93864008099791!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1613597664947!5m2!1sen!2sru" width="943" height="449" allowfullscreen="" aria-hidden="false" tabindex="0" title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
     </section>
-    <script src="/js/modal.js"></script>
-    <script src="/js/slider.js"></script>
+    <script src="/js/main-page/modal.js"></script>
+    <script src="/js/main-page/slider.js"></script>
   </body>
 </html>
