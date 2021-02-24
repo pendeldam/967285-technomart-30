@@ -208,17 +208,17 @@
           <div class="services-desc-wrapper">
             <ul class="services-list">
               <li class="services-list__item services-list__item--active">
-                <button>Доставка</button>
+                <button data-id="delivery">Доставка</button>
               </li>
               <li class="services-list__item">
-                <button>Гарантия</button>
+                <button data-id="warranty">Гарантия</button>
               </li>
               <li class="services-list__item">
-                <button>Кредит</button>
+                <button data-id="credit">Кредит</button>
               </li>
             </ul>
             <ul class="services-desc-list">
-              <li class="services-desc-list__item services-desc-list__item--active">
+              <li class="services-desc-list__item services-desc-list__item--active" data-id="delivery">
                 <h3 class="heading">доставка</h3>
                 <p>Мы с удовольствием доставим ваш товар прямо<br>
                   к вашему подъезду совершенно бесплатно!<br>
@@ -226,7 +226,7 @@
                   поднимая его на ваш этаж!
                 </p>
               </li>
-              <li class="services-desc-list__item">
+              <li class="services-desc-list__item" data-id="warranty">
                 <h3 class="heading">гарантия</h3>
                 <p>Если купленный у нас товар поломается или заискрит,<br>
                   а также в случае пожара, спровоцированного его<br>
@@ -235,7 +235,7 @@
                   Дом уж восстановите как-нибудь сами.
                 </p>
               </li>
-              <li class="services-desc-list__item">
+              <li class="services-desc-list__item" data-id="credit">
                 <h3 class="heading">кредит</h3>
                 <p>Залезть в долговую яму стало проще!<br>
                   Кредитные консультанты придут вам на помощь.
@@ -269,7 +269,9 @@
           <p>Вы можете забрать товар сами,<br>
             заехав в наш офис:
           </p>
-          <img src="img/misc/map.jpg" width="300" height="158" alt="Адрес офиса: Санкт-Петербург, Б.Конюшенная 19/8">
+          <a class="contacts__map-link" href="#" aria-label="на координаты на Google Maps">
+            <img src="img/misc/map.jpg" width="300" height="158" alt="Адрес офиса: Санкт-Петербург, Б.Конюшенная 19/8">
+          </a>
           <a class="site-link" href="mailto:mail@htmlacademy.ru">заблудились? напишите нам!</a>
         </section>
       </div>
@@ -360,5 +362,6 @@
       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d499.6520979603391!2d30.32327355270952!3d59.93864008099791!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1613597664947!5m2!1sen!2sru" width="943" height="449" allowfullscreen="" aria-hidden="false" tabindex="0" title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
     </section>
     <script src="/js/modal.js"></script>
+    <script src="/js/slider.js"></script>
   </body>
 </html>

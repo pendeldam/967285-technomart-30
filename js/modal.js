@@ -1,10 +1,12 @@
 const modalWindows = document.querySelectorAll(`.modal`);
 const modalCloseBtns = document.querySelectorAll(`.modal-close-btn`);
 const modalFeedback = document.querySelector(`.modal-feedback`);
+const modalMap = document.querySelector(`.modal-map`);
 const feedbackLink = document.querySelector(`.contacts .site-link`);
 const feedbackUserName = modalFeedback.querySelector(`#modal-feedback__user-name`);
 const feedbackUserMail = modalFeedback.querySelector(`#modal-feedback__user-mail`);
 const feedbackMessage = modalFeedback.querySelector(`#modal-feedback__message`);
+const mapLink = document.querySelector(`.contacts__map-link`);
 
 let isLocalStorageExist = true;
 let storedUserName = ``;
@@ -43,6 +45,11 @@ modalFeedback.querySelector(`form`).addEventListener(`submit`, (evt) => {
       localStorage.setItem(`userMail`, feedbackUserMail.value);
     }
   }
+});
+
+mapLink.addEventListener(`click`, (evt) => {
+  evt.preventDefault();
+  modalMap.classList.add(`modal--active`);
 });
 
 [...modalCloseBtns].forEach((btn) => {
