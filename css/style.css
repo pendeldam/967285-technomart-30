@@ -148,10 +148,10 @@ img {
 .site-link {
   display: block;
   width: 192px;
-  height: 38px;
+  padding: 10px 0;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
-  line-height: 38px;
+  line-height: 18px;
   text-align: center;
   text-transform: uppercase;
   color: var(--basic-white);
@@ -927,6 +927,10 @@ img {
   margin: 0;
 }
 
+.services-desc-list__item .site-link {
+  margin-top: 26px;
+}
+
 .contacts-wrapper {
   display: flex;
   justify-content: space-between;
@@ -988,7 +992,7 @@ img {
 .contacts img {
   width: 300px;
   height: 158px;
-  margin: 32px 0 25px 0;
+  margin: 25px 0;
 }
 
 .contacts .site-link {
