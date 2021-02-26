@@ -1695,8 +1695,9 @@ img {
   display: none;
   width: 620px;
   position: fixed;
-  top: 25%;
-  left: 25%;
+  top: 28%;
+  left: 33%;
+  z-index: 1;
   background-color: var(--basic-white);
   filter: drop-shadow(0px 20px 40px var(--transparent-extra-black));
   box-sizing: border-box;
@@ -1867,6 +1868,8 @@ img {
 
 .modal-in-cart {
   min-height: 282px;
+  top: 35%;
+  left: 35%;
 }
 
 .modal-in-cart p {
@@ -1900,10 +1903,13 @@ img {
   color: var(--basic-black);
 }
 
-.modal-map {
+.modal-map, .modal-map iframe {
   width: 943px;
   height: 449px;
   border: none;
+  border-top: 7px solid var(--basic-red);
+  top: 28%;
+  left: 25%;
 }
 
 /* animations */
