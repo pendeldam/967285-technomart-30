@@ -6,7 +6,6 @@
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/icons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/icons/favicon-180.png">
-    <!-- <link rel="manifest" href="js/manifest.webmanifest"> -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
   </head>
@@ -14,7 +13,7 @@
     <header class="main-header">
       <div class="main-header__top-wrapper">
         <div class="main-header__top container">
-          <a class="site-logo"></a>
+          <a class="site-logo" aria-label="на главную страницу"></a>
           <form class="main-header__search-form" action="#" method="POST">
             <input class="main-header__search" id="header-search-input" type="search" placeholder="Поиск:">
             <label for="header-search-input" aria-label="поиск по сайту">
@@ -23,13 +22,9 @@
                 </svg>
             </label>
           </form>
-          <div class="main-header__controls">
-            <a class="main-header__bookmarks" href="#">Закладки:&nbsp;<span>0</span></a>
-            <div class="main-header__controls-wrapper">
-              <a class="main-header__cart" href="#">Корзина:&nbsp;<span>0</span></a>
-              <a class="main-header__order" href="#">Оформить заказ</a>
-            </div>
-          </div>
+          <a class="main-header__bookmarks" href="#">Закладки:&nbsp;<span>0</span></a>
+          <a class="main-header__cart" href="#">Корзина:&nbsp;<span>0</span></a>
+          <a class="main-header__order" href="#">Оформить заказ</a>
         </div>
       </div>
       <div class="main-header__inner container">
@@ -282,7 +277,7 @@
         <div class="main-footer__top-wrapper container">
           <div class="main-footer__address">
             <h2 class="visually-hidden">Наш адрес</h2>
-            <a class="site-logo" href="index.html" aria-label="на главную страницу"></a>
+            <a class="site-logo" href="#" aria-label="на главную страницу"></a>
             <p>г.&nbsp;Санкт-Петербург, ул.&nbsp;Б.&nbsp;Конюшенная, д.&nbsp;19/8<br>
               <a class="phone-link" href="tel:78125550555" aria-label="наш телефон">+7&nbsp;(812)&nbsp;555-05-55</a>
             </p>
