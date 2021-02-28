@@ -1802,9 +1802,9 @@ img {
 
 .modal-feedback__form input {
   width: 220px;
-  line-height: 32px;
+  line-height: 24px;
   margin-bottom: 13px;
-  padding-top: 2px;
+  padding-top: 8px;
   padding-left: 10px;
 }
 
@@ -1846,7 +1846,7 @@ img {
   border: none;
   text-transform: uppercase;
   padding: 10px 0;
-  margin: 37px 0;
+  margin: 38px 0;
   cursor: pointer;
 }
 
