@@ -120,26 +120,39 @@
         </div>
           <ul class="popular-goods-list">
             <li class="catalog-product-card">
-              <div class="wrapper">
-
-                <img src="img/catalog/bosch_bfg_9000.jpg" width="184" height="164" alt="BOSCH BFG 9000">
+              <div class="catalog-product-card__popup">
+                <a class="catalog-product-card__buy-btn" href="#">купить</a>
+                <a class="catalog-product-card__bookmark-btn" href="#">в закладки</a>
               </div>
+                <img src="img/catalog/bosch_bfg_9000.jpg" width="184" height="164" alt="BOSCH BFG 9000">
                 <h3>Перфоратор BOSCH BFG 9000</h3>
                 <p>32500&nbsp;P.</p>
                 <a class="catalog-link" href="blank.html" aria-label="на страницу BOSCH BFG 9000">25500&nbsp;P.</a>
             </li>
             <li class="catalog-product-card catalog-product-card--new">
+              <div class="catalog-product-card__popup">
+                <a class="catalog-product-card__buy-btn" href="#">купить</a>
+                <a class="catalog-product-card__bookmark-btn" href="#">в закладки</a>
+              </div>
               <img src="img/catalog/bosch_bfg_3000.jpg" width="127" height="112" alt="BOSCH BFG 3000">
                 <h3>Перфоратор BOSCH BFG 3000</h3>
                 <p>22500&nbsp;P.</p>
                 <a class="catalog-link" href="blank.html" aria-label="на страницу BOSCH BFG 3000">15500&nbsp;P.</a>
             </li>
             <li class="catalog-product-card">
+              <div class="catalog-product-card__popup">
+                <a class="catalog-product-card__buy-btn" href="#">купить</a>
+                <a class="catalog-product-card__bookmark-btn" href="#">в закладки</a>
+              </div>
               <img src="img/catalog/bosch_bfg_6000.jpg" width="144" height="128" alt="BOSCH BFG 6000">
                 <h3>Перфоратор BOSCH BFG 6000</h3>
                 <p>30500&nbsp;P.</p>
                 <a class="catalog-link" href="blank.html" aria-label="на страницу BOSCH BFG 6000">25500&nbsp;P.</a>
             <li class="catalog-product-card catalog-product-card--new">
+              <div class="catalog-product-card__popup">
+                <a class="catalog-product-card__buy-btn" href="#">купить</a>
+                <a class="catalog-product-card__bookmark-btn" href="#">в закладки</a>
+              </div>
               <img src="img/catalog/bosch_bfg_2000.jpg" width="127" height="112" alt="BOSCH BFG 2000">
                 <h3>Перфоратор BOSCH BFG 2000</h3>
                 <p>22500&nbsp;P.</p>
@@ -219,10 +232,9 @@
               <li class="services-desc-list__item services-desc-list__item--delivery services-desc-list__item--active" data-id="delivery">
                 <h3 class="heading">доставка</h3>
                 <p>Мы с удовольствием доставим ваш товар прямо
-                  к вашему подъезду совершенно бесплатно!</p>
-                <p>Ведь мы неплохо заработаем,
+                  к вашему подъезду совершенно бесплатно!<br>
+                  Ведь мы неплохо заработаем,<br>
                   поднимая его на ваш этаж!</p>
-
               </li>
               <li class="services-desc-list__item services-desc-list__item--warranty" data-id="warranty">
                 <h3 class="heading">гарантия</h3>
@@ -248,14 +260,14 @@
         <section class="about-us">
           <h2 class="visually-hidden">О нас</h2>
           <p class="heading">компания &#171;техномарт&#187;</p>
-          <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для
+          <p class="about-us__promo">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для
             ремонта и строительства не оставит равнодушными любителей сэкономить на
             гастарбайтерах.
           </p>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки России!
+          <p class="about-us__desc">Мы можем доставить ваш товар в самые отдаленные точки России!
             Техномарт работает со многими транспортными компаниями:
           </p>
-          <ul class="transport-companies-list">
+          <ul class="about-us__transport-companies-list">
             <li>Деловые линии</li>
             <li>Автотрейдинг</li>
             <li>ЖелДорЭкспедиция</li>
@@ -265,7 +277,7 @@
         <section class="contacts">
           <h2 class="visually-hidden">Контакты</h2>
           <p class="heading">контакты</p>
-          <p>Вы можете забрать товар сами,<br>
+          <p class="contacts__info">Вы можете забрать товар сами,<br>
             заехав в наш офис:
           </p>
           <a class="contacts__map-link" href="#" aria-label="на координаты на Google Maps">
@@ -360,7 +372,19 @@
       <button class="modal-close-btn" type="button" aria-label="закрыть форму"></button>
       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d499.6520979603391!2d30.32327355270952!3d59.93864008099791!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1613597664947!5m2!1sen!2sru" width="943" height="449" allowfullscreen="" aria-hidden="false" tabindex="0" title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
     </section>
-    <script src="/js/main-page/modal.min.js"></script>
-    <script src="/js/main-page/slider.min.js"></script>
+
+    <section class="modal modal-in-cart">
+      <h2 class="visually-hidden">Товар в корзине</h2>
+      <button class="modal-close-btn" type="button" aria-label="закрыть форму"></button>
+      <p>Товар добавлен в корзину!</p>
+      <div class="modal-controls-wrapper">
+        <div class="modal-feedback__form-wrapper">
+          <button class="modal-button" type="button">оформить заказ</button>
+          <button class="modal-button" type="button">продолжить покупки</button>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/main-page/main.min.js"></script>
   </body>
 </html>

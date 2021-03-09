@@ -14,7 +14,7 @@
     <header class="main-header">
       <div class="main-header__top-wrapper">
         <div class="main-header__top container">
-          <a class="site-logo" href="index.html"></a>
+          <a class="site-logo" href="index.html" aria-label="на главную страницу"></a>
           <form class="main-header__search-form" action="#" method="POST">
             <input class="main-header__search" id="header-search-input" type="search" placeholder="Поиск:">
             <label for="header-search-input">
@@ -56,7 +56,6 @@
           </div>
           <div class="main-header__user-controls">
             <a class="main-header__orders-btn" href="blank.html">Мои заказы</a>
-            <span>&bull;</span>
             <a class="main-header__profile-btn" href="blank.html">Личный кабинет</a>
           </div>
         </div>
@@ -105,8 +104,10 @@
                       <div class="catalog-filters__price-toggle toggle-max" tabindex="0" style="left: 74%"></div>
                     </div>
                     <div class="catalog-filters__price-limit">
+                      <label class="visually-hidden" for="filter-price-limit-from">минимальная цена</label>
                       <input type="text" name="price-limit" id="filter-price-limit-from" value="0">
                       <span>&ndash;</span>
+                      <label class="visually-hidden" for="filter-price-limit-to">максимальная цена</label>
                       <input type="text" name="price-limit" id="filter-price-limit-to" value="30000">
                     </div>
                   </div>
@@ -156,17 +157,19 @@
             <section class="catalog-sorting">
               <form action="#" method="get">
                 <h2>сортировка:</h2>
-                <div class="catalog-sorting__type">
-                  <input class="visually-hidden" type="radio" name="sort-type" id="sort-by-price" checked>
-                  <label for="sort-by-price">по цене</label>
-                </div>
-                <div class="catalog-sorting__type">
-                  <input class="visually-hidden" type="radio" name="sort-type" id="sort-by-type">
-                  <label for="sort-by-type">по типу</label>
-                </div>
-                <div class="catalog-sorting__type">
-                  <input class="visually-hidden" type="radio" name="sort-type" id="sort-by-function">
-                  <label for="sort-by-function">по функционалу</label>
+                <div class="catalog-sorting__types-wrapper">
+                  <div class="catalog-sorting__type">
+                    <input class="visually-hidden" type="radio" name="sort-type" id="sort-by-price" checked>
+                    <label for="sort-by-price">по цене</label>
+                  </div>
+                  <div class="catalog-sorting__type">
+                    <input class="visually-hidden" type="radio" name="sort-type" id="sort-by-type">
+                    <label for="sort-by-type">по типу</label>
+                  </div>
+                  <div class="catalog-sorting__type">
+                    <input class="visually-hidden" type="radio" name="sort-type" id="sort-by-function">
+                    <label for="sort-by-function">по функционалу</label>
+                  </div>
                 </div>
                 <div class="catalog-sorting__direction">
                   <input class="visually-hidden" id="sort-direction-up" type="radio" name="sort-direction" checked>
@@ -188,55 +191,88 @@
               <h2 class="visually-hidden">Список товаров</h2>
               <ul class="catalog-goods__list">
                 <li class="catalog-product-card">
+                  <div class="catalog-product-card__popup">
+                    <a class="catalog-product-card__buy-btn" href="#">купить</a>
+                    <a class="catalog-product-card__bookmark-btn" href="#">в закладки</a>
+                  </div>
                   <img src="img/catalog/bosch_bfg_6000.jpg" width="144" height="128" alt="BOSCH BFG 6000">
                   <h3>Перфоратор BOSCH BFG 6000</h3>
                   <p>30500&nbsp;P.</p>
                   <a class="catalog-link" href="blank.html" aria-label="на страницу BOSCH BFG 6000">25500&nbsp;P.</a>
                 </li>
                 <li class="catalog-product-card">
+                  <div class="catalog-product-card__popup">
+                    <a class="catalog-product-card__buy-btn" href="#">купить</a>
+                    <a class="catalog-product-card__bookmark-btn" href="#">в закладки</a>
+                  </div>
                   <img src="img/catalog/bosch_bfg_6000.jpg" width="144" height="128" alt="BOSCH BFG 6000">
                   <h3>Перфоратор BOSCH BFG 6000</h3>
                   <p>30500&nbsp;P.</p>
                   <a class="catalog-link" href="blank.html" aria-label="на страницу BOSCH BFG 6000">25500&nbsp;P.</a>
                 </li>
-                <li class="catalog-product-card catalog-product-card--new catalog-product-card--active">
+                <li class="catalog-product-card catalog-product-card--new">
                   <div class="catalog-product-card__popup">
-                    <button class="catalog-product-card__buy-btn" type="button">купить</button>
-                    <button class="catalog-product-card__bookmark-btn" type="button">в закладки</button>
+                    <a class="catalog-product-card__buy-btn" href="#"><span>купить</span></a>
+                    <a class="catalog-product-card__bookmark-btn" href="#">в закладки</a>
                   </div>
+                  <img src="img/catalog/bosch_bfg_6000.jpg" width="144" height="128" alt="BOSCH BFG 6000">
                   <h3>Перфоратор BOSCH BFG 6000</h3>
                   <p>30500&nbsp;P.</p>
                   <a class="catalog-link" href="blank.html" aria-label="на страницу BOSCH BFG 6000">25500&nbsp;P.</a>
                 </li>
                 <li class="catalog-product-card catalog-product-card--new">
+                  <div class="catalog-product-card__popup">
+                    <a class="catalog-product-card__buy-btn" href="#">купить</a>
+                    <a class="catalog-product-card__bookmark-btn" href="#">в закладки</a>
+                  </div>
                   <img src="img/catalog/bosch_bfg_3000.jpg" width="127" height="112" alt="BOSCH BFG 3000">
                   <h3>Перфоратор BOSCH BFG 3000</h3>
                   <p>30500&nbsp;P.</p>
                   <a class="catalog-link" href="blank.html" aria-label="на страницу BOSCH BFG 3000">15500&nbsp;P.</a>
                 </li>
                 <li class="catalog-product-card">
+                  <div class="catalog-product-card__popup">
+                    <a class="catalog-product-card__buy-btn" href="#">купить</a>
+                    <a class="catalog-product-card__bookmark-btn" href="#">в закладки</a>
+                  </div>
                   <img src="img/catalog/bosch_bfg_6000.jpg" width="144" height="128" alt="BOSCH BFG 6000">
                   <h3>Перфоратор BOSCH BFG 6000</h3>
                   <p>30500&nbsp;P.</p>
                   <a class="catalog-link" href="blank.html" aria-label="на страницу BOSCH BFG 6000">25500&nbsp;P.</a>
                 </li>
                 <li class="catalog-product-card catalog-product-card--new">
+                  <div class="catalog-product-card__popup">
+                    <a class="catalog-product-card__buy-btn" href="#">купить</a>
+                    <a class="catalog-product-card__bookmark-btn" href="#">в закладки</a>
+                  </div>
                   <img src="img/catalog/bosch_bfg_2000.jpg" width="127" height="112" alt="BOSCH BFG 2000">
                   <h3>Перфоратор BOSCH BFG 2000</h3>
                   <a class="catalog-link" href="blank.html" aria-label="на страницу BOSCH BFG 2000">12500&nbsp;P.</a>
                 </li>
                 <li class="catalog-product-card catalog-product-card--new">
+                  <div class="catalog-product-card__popup">
+                    <a class="catalog-product-card__buy-btn" href="#">купить</a>
+                    <a class="catalog-product-card__bookmark-btn" href="#">в закладки</a>
+                  </div>
                   <img src="img/catalog/bosch_bfg_3000.jpg" width="127" height="112" alt="BOSCH BFG 3000">
                   <h3>Перфоратор BOSCH BFG 3000</h3>
                   <p>22500&nbsp;P.</p>
                   <a class="catalog-link" href="blank.html" aria-label="на страницу BOSCH BFG 3000">15500&nbsp;P.</a>
                 <li class="catalog-product-card">
+                  <div class="catalog-product-card__popup">
+                    <a class="catalog-product-card__buy-btn" href="#">купить</a>
+                    <a class="catalog-product-card__bookmark-btn" href="#">в закладки</a>
+                  </div>
                   <img src="img/catalog/bosch_bfg_6000.jpg" width="144" height="128" alt="BOSCH BFG 6000">
                   <h3>Перфоратор BOSCH BFG 6000</h3>
                   <p>30500&nbsp;P.</p>
                   <a class="catalog-link" href="blank.html" aria-label="на страницу BOSCH BFG 6000">25500&nbsp;P.</a>
                 </li>
                 <li class="catalog-product-card catalog-product-card--new">
+                  <div class="catalog-product-card__popup">
+                    <a class="catalog-product-card__buy-btn" href="#">купить</a>
+                    <a class="catalog-product-card__bookmark-btn" href="#">в закладки</a>
+                  </div>
                   <img src="img/catalog/bosch_bfg_2000.jpg" width="127" height="112" alt="BOSCH BFG 2000">
                   <h3>Перфоратор BOSCH BFG 2000</h3>
                   <a class="catalog-link" href="blank.html" aria-label="на страницу BOSCH BFG 2000">12500&nbsp;P.</a>
@@ -327,6 +363,6 @@
         </div>
       </div>
     </section>
-    <script src="/js/catalog-page/modal.min.js"></script>
+    <script src="js/catalog-page/modal.min.js"></script>
   </body>
 </html>
