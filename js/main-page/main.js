@@ -94,7 +94,8 @@ const productBuyBtns = document.querySelectorAll(`.catalog-product-card__buy-btn
 });
 
 [...productBuyBtns].forEach((it) => {
-  it.addEventListener(`click`, () => {
+  it.addEventListener(`click`, (evt) => {
+    evt.preventDefault();
     modalInCart.classList.add(`modal--active`);
   });
 });

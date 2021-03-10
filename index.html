@@ -121,7 +121,7 @@
           <ul class="popular-goods-list">
             <li class="catalog-product-card">
               <div class="catalog-product-card__popup">
-                <a class="catalog-product-card__buy-btn" href="#">купить</a>
+                <a class="catalog-product-card__buy-btn" href="#"><span>купить</span></a>
                 <a class="catalog-product-card__bookmark-btn" href="#">в закладки</a>
               </div>
                 <img src="img/catalog/bosch_bfg_9000.jpg" width="184" height="164" alt="BOSCH BFG 9000">
@@ -131,7 +131,7 @@
             </li>
             <li class="catalog-product-card catalog-product-card--new">
               <div class="catalog-product-card__popup">
-                <a class="catalog-product-card__buy-btn" href="#">купить</a>
+                <a class="catalog-product-card__buy-btn" href="#"><span>купить</span></a>
                 <a class="catalog-product-card__bookmark-btn" href="#">в закладки</a>
               </div>
               <img src="img/catalog/bosch_bfg_3000.jpg" width="127" height="112" alt="BOSCH BFG 3000">
@@ -141,7 +141,7 @@
             </li>
             <li class="catalog-product-card">
               <div class="catalog-product-card__popup">
-                <a class="catalog-product-card__buy-btn" href="#">купить</a>
+                <a class="catalog-product-card__buy-btn" href="#"><span>купить</span></a>
                 <a class="catalog-product-card__bookmark-btn" href="#">в закладки</a>
               </div>
               <img src="img/catalog/bosch_bfg_6000.jpg" width="144" height="128" alt="BOSCH BFG 6000">
@@ -150,7 +150,7 @@
                 <a class="catalog-link" href="blank.html" aria-label="на страницу BOSCH BFG 6000">25500&nbsp;P.</a>
             <li class="catalog-product-card catalog-product-card--new">
               <div class="catalog-product-card__popup">
-                <a class="catalog-product-card__buy-btn" href="#">купить</a>
+                <a class="catalog-product-card__buy-btn" href="#"><span>купить</span></a>
                 <a class="catalog-product-card__bookmark-btn" href="#">в закладки</a>
               </div>
               <img src="img/catalog/bosch_bfg_2000.jpg" width="127" height="112" alt="BOSCH BFG 2000">
@@ -318,7 +318,7 @@
       <div class="main-footer__bottom">
         <div class="main-footer__bottom-wrapper container">
           <div class="main-footer__copyright">
-            <p>&copy;&nbsp;2010-2019 Компания "Техномарт"</p>
+            <p>&copy;&nbsp;2010&ndash;2019 Компания &laquo;Техномарт&raquo;</p>
             <p>Все права защищены</p>
           </div>
           <div class="main-footer__social-links">
@@ -376,7 +376,10 @@
     <section class="modal modal-in-cart">
       <h2 class="visually-hidden">Товар в корзине</h2>
       <button class="modal-close-btn" type="button" aria-label="закрыть форму"></button>
-      <p>Товар добавлен в корзину!</p>
+      <div class="modal-in-cart__message">
+        <img src="img/icons/success.png" width="66" height="66" alt="товар добавлен">
+        <p>Товар добавлен в корзину!</p>
+      </div>
       <div class="modal-controls-wrapper">
         <div class="modal-feedback__form-wrapper">
           <button class="modal-button" type="button">оформить заказ</button>

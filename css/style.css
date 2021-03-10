@@ -459,18 +459,12 @@ img {
 
 .main-header__user-info {
   width: 299px;
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  column-gap: 20px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   background-color: var(--basic-white);
-  padding: 8px 15px;
+  padding: 7px 15px;
   box-sizing: border-box;
-}
-
-.main-header__user-avatar,
-.main-header__logout-link {
-  padding-top: 5px;
 }
 
 .main-header__user-name {
@@ -478,10 +472,18 @@ img {
   line-height: 21px;
   color: var(--basic-black);
   word-break: break-word;
+  display: flex;
+  align-items: center;
 }
 
-.main-header__user-name:hover {
-  color: var(--basic-red);
+.main-header__user-name svg {
+  min-width: 20px;
+  min-height: 15px;
+  margin-right: 20px;
+}
+
+.main-header__logout-link {
+  padding-top: 5px;
 }
 
 .main-header__user-controls {
@@ -524,17 +526,17 @@ img {
   color: var(--basic-red);
 }
 
-.main-header__user-avatar svg,
+.main-header__user-name svg,
 .main-header__logout-link svg {
   fill: var(--basic-special-neutral);
 }
 
-.main-header__user-avatar:hover svg,
+.main-header__user-name:hover svg,
 .main-header__logout-link:hover svg {
   fill: var(--basic-darkest-grey);
 }
 
-.main-header__user-avatar:active svg,
+.main-header__user-name:active svg,
 .main-header__logout-link:active svg {
   fill: var(--basic-special-neutral);
 }
@@ -1447,7 +1449,6 @@ img {
 .catalog-product-card__popup {
   display: none;
   margin-top: 40px;
-  height: 125px;
 }
 
 .catalog-product-card img {
@@ -1463,7 +1464,7 @@ img {
   justify-content: center;
   align-items: center;
   width: 135px;
-  height: 38px;
+  padding: 7px;
   border-radius: 2px;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
@@ -1477,19 +1478,21 @@ img {
 .catalog-product-card__buy-btn {
   background: var(--basic-green);
   box-shadow: inset 0px -3px 0px var(--basic-extra-dark-green);
-  position: relative;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
+  padding: 9px;
 }
 .catalog-product-card__buy-btn span {
   padding-left: 10px;
+  padding-right: 30px;
+  word-break: break-word;
+  display: flex;
+  align-items: center;
 }
 
-.catalog-product-card__buy-btn::before {
-  position: absolute;
+.catalog-product-card__buy-btn span::before {
   content: url("../img/icons/cart.svg");
-  top: 10px;
-  left: 28px;
   opacity: 0.3;
+  padding-right: 10px;
 }
 
 .catalog-product-card__buy-btn:hover {
@@ -1560,8 +1563,6 @@ img {
 }
 
 .catalog-pagination_list li {
-  width: 38px;
-  height: 38px;
   margin-right: 9px;
 }
 
@@ -1575,7 +1576,7 @@ img {
   border: 1px solid var(--basic-neutral);
   border-radius: 2px;
   line-height: 18px;
-  padding: 10px;
+  padding: 10px 15px;
   display: block;
   text-align: center;
   color: var(--basic-black);
@@ -1612,7 +1613,7 @@ img {
 }
 
 .catalog-product__info .section-subtitle {
-  padding: 50px 0 25px 0;
+  padding: 50px 0 28px 0;
 }
 
 .catalog-product__info p {
@@ -1638,11 +1639,11 @@ img {
 }
 
 .main-footer__address > p {
-  margin: 30px 0 0 5px;
+  margin: 27px 0 0 5px;
 }
 
 .main-footer__nav {
-  margin-top: 40px;
+  margin-top: 36px;
   margin-left: 45px;
 }
 
@@ -1760,10 +1761,12 @@ img {
 
 .modal {
   display: none;
-  width: 620px;
   position: fixed;
-  top: 28%;
-  left: 33%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
   z-index: 1;
   background-color: var(--basic-white);
   filter: drop-shadow(0px 20px 40px var(--transparent-extra-black));
@@ -1829,7 +1832,10 @@ img {
 }
 
 .modal-feedback {
+  width: 620px;
   min-height: 430px;
+  top: 30%;
+  bottom: auto;
 }
 
 .modal-feedback__form {
@@ -1934,20 +1940,33 @@ img {
 }
 
 .modal-in-cart {
+  width: 620px;
   min-height: 282px;
   top: 35%;
-  left: 35%;
+  bottom: auto;
+}
+
+.modal-in-cart__message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-in-cart__message img {
+  width: 66px;
+  height: 66px;
+  margin-right: 10px;
 }
 
 .modal-in-cart p {
+  width: 300px;
   margin: 0;
-  padding: 65px 99px 68px;
+  padding: 65px 80px 68px 0;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
   text-align: center;
-  background: url("../img/icons/success.png") no-repeat 80px center;
 }
 
 .modal-in-cart .modal-feedback__form-wrapper {
@@ -1975,8 +1994,6 @@ img {
   height: 449px;
   border: none;
   border-top: 7px solid var(--basic-red);
-  top: 28%;
-  left: 25%;
 }
 
 /* animations */

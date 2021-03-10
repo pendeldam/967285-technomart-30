@@ -16,7 +16,8 @@ const modalCloseBtns = modalWindow.querySelector(`.modal-close-btn`);
 });
 
 [...productBuyBtns].forEach((it) => {
-  it.addEventListener(`click`, () => {
+  it.addEventListener(`click`, (evt) => {
+    evt.preventDefault();
     modalWindow.classList.add(`modal--active`);
   });
 });
