@@ -1047,7 +1047,7 @@ img {
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
-  margin-top: 18px;
+  margin-top: 15px;
   list-style: none;
 }
 
@@ -1059,6 +1059,7 @@ img {
   line-height: 18px;
   position: relative;
   margin-right: 42px;
+  margin-bottom: 5px;
 }
 
 .catalog-breadcrumbs li::after {
@@ -1137,6 +1138,7 @@ img {
   text-transform: uppercase;
   padding-top: 15px;
   padding-bottom: 9px;
+  word-break: break-word;
 }
 
 .catalog-filters__form ul {
@@ -1146,8 +1148,9 @@ img {
 }
 
 .catalog-filters__form li {
-  margin-bottom: 15px;
+  margin-bottom: 9px;
   position: relative;
+  padding-left: 27px;
 }
 
 .catalog-filters__price {
@@ -1159,10 +1162,8 @@ img {
 .catalog-filters__price-controls {
   position: relative;
   height: 33px;
-  margin-bottom: 15px;
-  padding-top: 39px;
-  padding-right: 20px;
-  padding-left: 20px;
+  margin-bottom: 11px;
+  padding: 39px 20px 8px 20px;
   background-color: var(--basic-brown);
   border-radius: 5px;
 }
@@ -1218,13 +1219,9 @@ img {
   text-align: center;
 }
 
-.catalog-filters__vendors legend {
-  padding-bottom: 19px;
-}
-
+.catalog-filters__vendors legend,
 .catalog-filters__power-supply legend {
-  padding-top: 2px;
-  padding-bottom: 23px;
+  padding: 15px 0;
 }
 
 .catalog-filters__vendors label,
@@ -1233,23 +1230,27 @@ img {
   font-size: 15px;
   line-height: 19px;
   text-transform: uppercase;
-  padding: 5px 0 5px 33px;
+  padding: 5px;
   cursor: pointer;
   position: relative;
+  display: block;
+  word-break: break-word;
 }
 
 .catalog-filters__vendors label::before {
   content: url("../img/icons/checkbox-off.svg");
   position: absolute;
-  left: 0;
-  opacity: 0.7;
+  top: 2px;
+  left: -31px;
+  opacity: .7;
 }
 
 .catalog-filters__power-supply label::before {
   content: url("../img/icons/radio-off.svg");
   position: absolute;
-  left: 0;
-  opacity: 0.7;
+  top: 6px;
+  left: -30px;
+  opacity: .7;
 }
 
 .catalog-filters__vendors input:checked + label::before {
@@ -1286,6 +1287,7 @@ img {
   cursor: pointer;
   width: 220px;
   height: 38px;
+  word-break: break-word;
 }
 
 .catalog-filters__submit-btn:hover {
@@ -1609,7 +1611,7 @@ img {
 .catalog-product__info {
   background-color: var(--basic-extra-light);
   margin-top: 60px;
-  padding-bottom: 70px;
+  padding-bottom: 67px;
 }
 
 .catalog-product__info .section-subtitle {
@@ -1728,7 +1730,7 @@ img {
 
 .main-footer__social-links {
   display: flex;
-  margin-left: 50px;
+  margin-left: 40px;
 }
 
 .main-footer__social-links a {
